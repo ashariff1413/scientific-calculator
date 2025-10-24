@@ -1,0 +1,38 @@
+# Compiled class files
+*.class
+*.jar
+build-output/
+build/
+
+# JDK folders (don't upload - too large!)
+bin/
+conf/
+include/
+legal/
+lib/
+
+# Large distribution files
+dist/ScientificCalculator-1.0.exe
+dist/ScientificCalculator/
+ScientificCalculator/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*~
+
+# Build artifacts
+*.exe
+release
+NOTICE
