@@ -6,9 +6,13 @@ A modern, feature-rich scientific calculator for Windows with advanced mathemati
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 ![Java](https://img.shields.io/badge/java-8%2B-orange)
 
-## 📥 Quick Download
+## 📥 Download
 
-**[Download Installer (190 MB)](dist/ScientificCalculator-1.0.exe)** - No Java required!
+**[⬇️ Download ScientificCalculator-1.0.exe (190 MB)](https://github.com/ashariff1413/scientific-calculator/releases/latest/download/ScientificCalculator-1.0.exe)**
+
+No Java installation required! Works on Windows 10/11.
+
+> **Alternative:** [View all releases](https://github.com/ashariff1413/scientific-calculator/releases)
 
 ## ✨ Features
 
