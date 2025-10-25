@@ -2,17 +2,41 @@
 
 A modern, feature-rich scientific calculator for Windows with advanced mathematical capabilities including trigonometric functions, complex numbers, calculus operations, and system of equations solving.
 
-![Version](https://img.shields.io/badge/version-1.0-blue)
+![Version](https://img.shields.io/badge/version-1.1-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 ![Java](https://img.shields.io/badge/java-8%2B-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ## 📥 Download
 
-**[⬇️ Download ScientificCalculator-1.0.exe (190 MB)](https://github.com/ashariff1413/scientific-calculator/releases/latest/download/ScientificCalculator-1.0.exe)**
+### 🪟 Windows (No Java Required)
+**[Download ScientificCalculator-1.1-Windows.zip](https://github.com/ashariff1413/scientific-calculator/releases/download/v1.1/ScientificCalculator-1.1-Windows.zip)** (223 MB)
+- Extract the ZIP file
+- Run `ScientificCalculator.exe`
+- Works on Windows 10/11
 
-No Java installation required! Works on Windows 10/11.
+### ☕ Cross-Platform (Requires Java 8+)
+**[Download ScientificCalculator.jar](https://github.com/ashariff1413/scientific-calculator/releases/download/v1.1/ScientificCalculator.jar)** (35 KB)
+- Run with: `java -jar ScientificCalculator.jar`
+- Works on Windows, Mac, Linux
 
-> **Alternative:** [View all releases](https://github.com/ashariff1413/scientific-calculator/releases)
+---
+
+## 🎉 What's New in v1.1
+
+### ✨ Enhanced Display Formatting
+- **Clean Number Display**: Results now show without unnecessary trailing zeros
+  - `3` instead of `3.0`
+  - `120` instead of `120.000000`
+- Applied to all operations: summation (Σ), product (∏), gradient (∇), integrals, limits
+
+### 🚀 Improved Derivative Calculator
+- **Symbolic Differentiation** now handles polynomial expressions
+  - `x^2+3*x+5` → `2*x+3`
+  - `2*x^3+x^2` → `6*x^2+2*x`
+- **Numerical Fallback** for trigonometric and logarithmic functions
+
+[View Full Changelog](CHANGELOG.md)
 
 ## ✨ Features
 
@@ -43,6 +67,38 @@ cd src
 ..\bin\java Calculator
 ```
 
+## 🎯 Usage Examples
+
+### Basic Calculation
+```
+Input: 2+3*4
+Output: 14
+```
+
+### Derivatives (NEW in v1.1!)
+```
+Click d/dx → Enter: x^2+3*x+5
+Output: 2*x+3
+```
+
+### Summation
+```
+Click Σ
+Function: x^2
+Variable: x
+Range: 1 to 5
+Output: 55
+```
+
+### Gradient
+```
+Click ∇
+Function: x^2 + y^2
+Variables: x,y
+Point: 1,2
+Output: [2, 4]
+```
+
 ## 📁 Project Structure
 
 ```
@@ -57,11 +113,14 @@ Scientific-Calculator/
 │   ├── EquationSolver.java       # Single equation solver
 │   └── CalculusHelper.java       # Calculus operations
 │
-├── dist/                         # Distribution files
-│   ├── ScientificCalculator-1.0.exe    # Full installer (MAIN)
-│   ├── ScientificCalculator.jar        # Cross-platform JAR
-│   └── ScientificCalculator/           # Portable version
-│       └── ScientificCalculator.exe    # Portable EXE
+├── ScientificCalculator/         # Distribution package
+│   ├── app/                      # Application files
+│   │   └── ScientificCalculator.jar
+│   ├── runtime/                  # Bundled Java runtime
+│   └── ScientificCalculator.exe  # Launcher
+│
+├── ScientificCalculator-1.1-Windows.zip  # Release package
+├── ScientificCalculator.jar      # Standalone JAR (35 KB)
 │
 ├── docs/                         # Documentation
 │   ├── README-FOR-USERS.md       # User guide
@@ -120,58 +179,21 @@ scripts\create-installer.bat
 - **[Sharing Guide](docs/SHARE-WITH-FRIENDS.md)** - Share with friends
 - **[Build Instructions](docs/build-exe-instructions.md)** - Build from source
 
-## 🎯 Usage Examples
 
-### Basic Calculation
-```
-Input: 2+3*4
-Output: 14
-```
 
-### Trigonometric
-```
-Input: sin(3.14159/2)
-Output: 1.0
-```
+## 📤 Distribution Options
 
-### Complex Numbers
-```
-Input: (3+4i)*(2-i)
-Output: 10+5i
-```
+### 🪟 Windows Package (223 MB)
+- **File:** `ScientificCalculator-1.1-Windows.zip`
+- No Java required (bundled runtime)
+- Extract and run `ScientificCalculator.exe`
+- Professional package with all dependencies
 
-### Calculus
-```
-Click d/dx → Enter: x^2+3*x+5
-Output: 2*x+3
-```
-
-### System of Equations
-```
-Click 2x2
-Equation 1: 2x + 3y = 8
-Equation 2: x - y = 1
-Output: x = 2.2, y = 1.2
-```
-
-## 📤 Distribution
-
-### For End Users:
-- **Installer:** `dist/ScientificCalculator-1.0.exe` (190 MB)
-  - No Java required (bundled)
-  - Professional installation
-  - Start Menu + Desktop shortcuts
-
-### For Developers:
-- **JAR File:** `dist/ScientificCalculator.jar` (10 KB)
-  - Requires Java 8+
-  - Cross-platform (Windows, Mac, Linux)
-
-### For Portable Use:
-- **Portable Folder:** `dist/ScientificCalculator/`
-  - No installation needed
-  - Copy folder anywhere
-  - No Java required (bundled)
+### ☕ Cross-Platform JAR (35 KB)
+- **File:** `ScientificCalculator.jar`
+- Requires Java 8+ installed
+- Works on Windows, Mac, Linux
+- Lightweight and portable
 
 ## 🌐 Sharing Options
 
@@ -207,8 +229,8 @@ Contributions welcome! Feel free to:
 
 ## 👨‍💻 Author
 
-Created with Java and Swing
-Version 1.0 - October 2025
+Created with Java and Swing  
+**Version 1.1** - October 2025
 
 ## 🙏 Acknowledgments
 
@@ -216,6 +238,14 @@ Version 1.0 - October 2025
 - Lanczos approximation for Gamma function
 - Simpson's rule for numerical integration
 - Cramer's rule for system solving
+- Central difference method for numerical derivatives
+
+## 📊 Version History
+
+- **v1.1** (2025-10-24) - Enhanced display formatting, improved derivatives
+- **v1.0** (2025-10-23) - Initial release
+
+[View Full Changelog](CHANGELOG.md)
 
 ---
 
